@@ -122,7 +122,7 @@ void loop()
 
   // Converte o valor bruto para porcentagem de luminosidade (0% a 100%)
   // 54 = valor no escuro total, 974 = valor com luz máxima (calibrado)
-  int luz = map(valor, 54, 974, 0, 100);
+  int luz = map(valor, 54, 974, 100, 0);
   luz = constrain(luz, 0, 100); // Garante que o valor fique entre 0 e 100
 
   // Envia os valores para o Serial Monitor para debug
